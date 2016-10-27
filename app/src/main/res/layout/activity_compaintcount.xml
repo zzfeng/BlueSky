@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_top_bar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_all_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/id_ll_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/id_tv_prostatus"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/arrow_down"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="恶意投诉"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/bg_all_style" />
+
+                <TextView
+                    android:id="@+id/id_bt_save"
+                    android:layout_width="65dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="19.5dp"
+                    android:layout_marginRight="22dp"
+                    android:background="@drawable/shape_circlerect_blue"
+                    android:gravity="center"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="12.5dp"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_beingtime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="催办截止日期" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_endtime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="整改截止日期" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_prjname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="项目名称" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_prjaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="项目地址" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="所属地区" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_street"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="乡街道办" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_reportperople"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="投诉人" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="电话" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_reportstatue"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="投诉类型" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="投诉原因"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/id_tv_problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/font_color_all"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_publish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="20dp" >
+
+                <Button
+                    android:id="@+id/id_bt_reformnotice"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bt_exit_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_circle_selector"
+                    android:text="发布催办通知"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/id_bt_supervisehandle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bt_exit_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_circle_selector"
+                    android:text="发布整改通知"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

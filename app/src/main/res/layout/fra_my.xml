@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <LinearLayout
+        android:id="@+id/id_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="当前登录账户,"
+                android:textColor="#FF666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:text="1001"
+                android:textColor="#0DA1EB"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.sundyn.bluesky.view.MyFraOfView
+            android:id="@+id/myFile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            yjl:iv_icon="@mipmap/fra_my_file"
+            yjl:tv_dic="您的照片文件存储在这里"
+            yjl:tv_name="我的文件" />
+
+        <com.sundyn.bluesky.view.MyFraOfView
+            android:id="@+id/cleanCache"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            yjl:iv_icon="@mipmap/fra_clean_cache"
+            yjl:tv_dic="清空软件存储"
+            yjl:tv_name="清理缓存" />
+
+        <com.sundyn.bluesky.view.MyFraOfView
+            android:id="@+id/update"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            yjl:iv_icon="@mipmap/fra_update"
+            yjl:tv_dic=""
+            yjl:tv_name="版本升级" />
+
+        <com.sundyn.bluesky.view.MyFraOfView
+            android:id="@+id/commen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            yjl:bottomline_visibility="invisible"
+            yjl:iv_icon="@mipmap/fra_info"
+            yjl:tv_dic=""
+            yjl:tv_name="关于" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/bt_ext"
+                android:layout_width="@dimen/bt_exit_width"
+                android:layout_height="@dimen/bt_exit_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/bt_exit_margin_bottom"
+                android:background="@color/bg_bt_exit"
+                android:text="退出账号"
+                android:textColor="#FFFFFFFF"
+                android:textSize="15sp" />
+            <!-- android:background="@drawable/shape_newsfra_readnum" -->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

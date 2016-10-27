@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140.5dp"
+        android:background="@color/bg_yellow" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="郑州市投诉数量汇总"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_title" />
+
+        <TextView
+            android:id="@+id/id_tv_tscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="2534667"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <com.sundyn.bluesky.view.VerticalText
+                android:id="@+id/id_tv_tsch01"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                yjl:font_down_color="@color/font_color_all"
+                yjl:font_up_color="@color/bg_yellow"
+                yjl:text_bold="invisible"
+                yjl:text_down="核实中" />
+
+            <View
+                android:layout_width="@dimen/line_height"
+                android:layout_height="47.5dp"
+                android:background="@color/bg_all_style" />
+
+            <com.sundyn.bluesky.view.VerticalText
+                android:id="@+id/id_tv_tsch02"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                yjl:font_down_color="@color/font_color_all"
+                yjl:font_up_color="@color/bg_yellow"
+                yjl:text_bold="invisible"
+                yjl:text_down="办理中" />
+
+            <View
+                android:layout_width="@dimen/line_height"
+                android:layout_height="47.5dp"
+                android:background="@color/bg_all_style" />
+
+            <com.sundyn.bluesky.view.VerticalText
+                android:id="@+id/id_tv_tsch80"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                yjl:font_down_color="@color/font_color_all"
+                yjl:font_up_color="@color/bg_yellow"
+                yjl:text_bold="invisible"
+                yjl:text_down="已办结" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="59dp" >
+
+            <TextView
+                android:id="@+id/id_tv_tskoukuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="67000"
+                android:textColor="@color/font_color_all"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@id/id_tv_tskoukuan"
+                android:text="万元"
+                android:textColor="@color/font_color_all"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:text="罚款总额"
+            android:textColor="@color/font_color_all"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/id_bt_stardate"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_tag"
+            android:text=""
+            android:textColor="@color/font_color_all"
+            android:textSize="@dimen/font_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="至"
+            android:textColor="@color/font_color_all"
+            android:textSize="@dimen/font_title" />
+
+        <Button
+            android:id="@+id/id_bt_enddate"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_tag"
+            android:text=""
+            android:textColor="@color/font_color_all"
+            android:textSize="@dimen/font_title" />
+    </RelativeLayout>
+
+</LinearLayout>

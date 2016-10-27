@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res/com.sundyn.bluesky"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_staus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/font_color_all"
+        android:textSize="15sp" />
+
+    <com.sundyn.bluesky.view.LinearListView
+        android:id="@+id/lv_sitestate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:divider="@mipmap/news_list_line"
+        android:dividerPadding="0.5dp"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        yjl:dividerThickness="1dp" />
+
+</LinearLayout>

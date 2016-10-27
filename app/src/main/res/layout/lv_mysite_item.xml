@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:minHeight="40dp" >
+
+        <TextView
+            android:id="@+id/tv_sitename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:maxEms="12"
+            android:text="WE空间二期项目施工工地"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/id_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/arrow_down" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/id_rt_mySiteOfMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#566C7C"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/id_mysite_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/camera" />
+
+            <TextView
+                android:id="@+id/tab_indicator_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4.5dp"
+                android:text="工地视频列表"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_mysite_datacenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/workbench_datacenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4.5dp"
+                android:text="工地数据中心"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_all_style"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/surfaceViewLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="199dp" >
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/writView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="视频正在连接中..."
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/liveCaptureBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10.5dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_capture" />
+
+        <ImageView
+            android:id="@+id/full"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10.5dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/liveCaptureBtn"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_fullscreen" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:id="@+id/id_sv_cameardetail">
+
+        <LinearLayout
+            android:id="@+id/ll_fullControl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <View
+                    android:id="@+id/id_icon"
+                    android:layout_width="5dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="#FFF9445A" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/id_icon"
+                    android:text="巡查问题"
+                    android:textColor="#FF666666"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#FFE5E5E5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" >
+
+                <com.sundyn.bluesky.view.FlowLayout
+                    android:id="@+id/tag_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start|top" >
+                </com.sundyn.bluesky.view.FlowLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <View
+                    android:id="@+id/id_icon_blue"
+                    android:layout_width="5dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:background="#FF28ABEC" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/id_icon_blue"
+                    android:text="实拍照片"
+                    android:textColor="#FF666666"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#FFE5E5E5" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <GridView
+                    android:id="@+id/imageGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipChildren="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="7dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="5"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dip" >
+                </GridView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/extraMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFE5E5E5"
+                    android:gravity="start"
+                    android:hint="附加信息 (细节问题、意见反馈/改进意见)"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    android:minLines="4"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:tag="suggest"
+                    android:textColor="#FF999999"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="14.5dp"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/bt_commit"
+                android:layout_width="@dimen/bt_exit_width"
+                android:layout_height="@dimen/bt_exit_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35.5dp"
+                android:layout_marginTop="35.5dp"
+                android:background="@drawable/bt_login_selector"
+                android:text="提交报告"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

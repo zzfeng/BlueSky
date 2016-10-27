@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_taskTitle"
+                style="@style/tv_task"
+                android:text="WE一期项目施工工地扬尘"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_taskTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2015-9-3"
+                    android:textColor="#D8D8D8"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tv_taskTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/tv_taskTime"
+                    android:text="网络投诉"
+                    android:textColor="#D8D8D8"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/tv_task"
+                android:text="现场实拍照片"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_taskImg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                style="@style/tv_task"
+                android:text="情况描述"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tv_taskTime"
+                android:text="描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况描述情况"
+                android:textColor="#D8D8D8"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

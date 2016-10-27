@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <com.sundyn.bluesky.view.FocusedTextView
+            android:id="@+id/tv_taskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/font_color_all"
+            android:textSize="@dimen/font_title"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_camerasite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/font_color_all_sub"
+                android:textSize="@dimen/font_title_sub"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_camerano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_camerasite"
+                android:text=""
+                android:textColor="@color/font_color_all_sub"
+                android:textSize="@dimen/font_title_sub"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkVideo"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bt_circle_selector"
+        android:text="检测"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

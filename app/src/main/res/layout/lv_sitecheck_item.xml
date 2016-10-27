@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44.8dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:minHeight="44.8dp" >
+
+    <TextView
+        android:id="@+id/tv_video_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="..."
+        android:textColor="@color/font_color_foucus"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/id_iv_pm"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:text="P"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/id_iv_video"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="S"
+        android:textColor="@color/blue_datacenter"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+</RelativeLayout>

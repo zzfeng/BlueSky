@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal" >
+
+        <com.sundyn.bluesky.view.ColorfulRingProgressView
+            android:id="@+id/crpv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            yjl:bgColor="#FF273241"
+            yjl:fgColorEnd="#FF0893A8"
+            yjl:fgColorStart="#FF0893A8"
+            yjl:percent="0"
+            yjl:startAngle="0"
+            yjl:strokeWid="5dp" />
+
+        <TextView
+            android:id="@+id/tvPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="#FF0893A8"
+            android:textSize="11sp" />
+    </FrameLayout>
+
+    <com.sundyn.bluesky.view.FocusedTextView
+        android:id="@+id/tv_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/font_color_foucus"
+        android:textSize="9sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

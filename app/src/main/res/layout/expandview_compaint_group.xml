@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/parent_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="核实中"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/id_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/arrow_down" />
+
+    <TextView
+        android:id="@+id/id_num"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@id/id_arrow"
+        android:background="@drawable/shape_circlerect_red"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="9sp" />
+
+</RelativeLayout>

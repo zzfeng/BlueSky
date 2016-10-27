@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/id_tv_areaName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="二七区"
+        android:textColor="#FFF9445A"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/bg_all_style" />
+
+    <TextView
+        android:id="@+id/id_tv_pmAllPct"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="PM10接入比"
+        android:textColor="@color/font_color_foucus"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/bg_all_style" />
+
+    <TextView
+        android:id="@+id/id_tv_videoAllPct"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="摄像接入比"
+        android:textColor="@color/font_color_foucus"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/bg_all_style" />
+
+    <TextView
+        android:id="@+id/id_tv_pmVideoAllPct"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="PM10和摄像双接入比"
+        android:textColor="@color/font_color_foucus"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/logoimage_width"
+            android:layout_height="@dimen/logoimage_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/logo_margin_top"
+            android:background="@mipmap/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/logotext_margin_top"
+            android:text="蓝天卫士"
+            android:textColor="@color/textcolor_login"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_exit_width"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="@dimen/et_user_width"
+                android:layout_height="@dimen/et_user_height"
+                android:background="#FF1D2531"
+                android:gravity="center_vertical"
+                android:hint="用户名"
+                android:paddingLeft="26dp"
+                android:text=""
+                android:textColor="@color/textcolor_login"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="@dimen/et_user_width"
+                android:layout_height="@dimen/et_user_height"
+                android:layout_marginTop="10dp"
+                android:background="#FF1D2531"
+                android:gravity="center_vertical"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:paddingLeft="26dp"
+                android:text=""
+                android:textColor="@color/textcolor_login"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="@dimen/et_user_width"
+                android:layout_height="@dimen/et_user_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bt_login_selector"
+                android:text="登录"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

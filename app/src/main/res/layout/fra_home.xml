@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_dark"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="29dp"
+                android:layout_marginTop="15dp"
+                android:gravity="end"
+                android:text="郑州市"
+                android:textColor="@color/blue_datacenter"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/id_tv_currentdata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/id_tv_pmtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:singleLine="true"
+                        android:text="PM10实时数据"
+                        android:textColor="@color/dark_blue"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_tv_write"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/black_dark"
+                    android:gravity="center"
+                    android:text="数据加载中..."
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal" >
+
+                <com.sundyn.bluesky.view.VerticalText
+                    android:id="@+id/vt_now"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="8.5dp"
+                    yjl:font_down_color="@color/dark_blue"
+                    yjl:font_up_color="@color/dark_blue"
+                    yjl:text_bold="invisible"
+                    yjl:text_down="超标天数"
+                    yjl:text_up="..." />
+
+                <com.sundyn.bluesky.view.VerticalText
+                    android:id="@+id/vt_prcent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="8.5dp"
+                    yjl:font_down_color="@color/dark_blue"
+                    yjl:font_up_color="@color/dark_blue"
+                    yjl:text_bold="invisible"
+                    yjl:text_down="超标天数占比"
+                    yjl:text_up="..." />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/main_radio"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_pm10"
+                    style="@style/home_tab"
+                    android:text="PM10"
+                    android:textColor="@color/yellow_datacenter" />
+
+                <RadioButton
+                    android:id="@+id/rb_pm25"
+                    style="@style/home_tab"
+                    android:text="PM2.5"
+                    android:textColor="@color/red_dark" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_ll_plusprecent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title_overdate"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/font_color_all"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:layout_marginLeft="20dp"
+                android:background="#FFE5E5E5" />
+
+            <FrameLayout
+                android:id="@+id/id_fl_overproof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/id_pie_chart_geo"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/id_framel_installpct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19.5dp"
+            android:background="@color/white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="工地接入系统占比"
+                    android:textColor="@color/font_color_all"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginLeft="20dp"
+                    android:background="#FFE5E5E5" />
+
+                <com.sundyn.bluesky.view.ImageGridView
+                    android:id="@+id/id_gv_geosite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipChildren="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="6dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="#FFE5E5E5" />
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="查看全部"
+                    android:textColor="#FF999999"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

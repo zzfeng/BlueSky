@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/shape_tag"
+    android:ellipsize="end"
+    android:maxEms="20"
+    android:paddingBottom="1dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="1dp"
+    android:text="TAG"
+    android:textColor="#FF666666"
+    android:textSize="15sp" >
+    
+    <!-- android:lines="1"-->
+
+</TextView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/id_check"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="日常巡查"
+            android:textColor="@color/font_color_foucus"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="42.5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_lable" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_projectChart"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="项目图表"
+            android:textColor="@color/font_color_foucus"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="42.5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_lable" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_complaintsCount"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="投诉汇总"
+            android:textColor="@color/font_color_foucus"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="42.5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_lable" />
+    </RelativeLayout>
+
+</LinearLayout>

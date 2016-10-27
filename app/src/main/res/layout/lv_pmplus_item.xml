@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.sundyn.bluesky.view.FocusedTextView
+        android:id="@+id/tv_sitename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="WE空间二期项目施工工地"
+        android:textColor="#FF666666"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="PM10指数"
+        android:textColor="#FF666666"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:text="323"
+        android:textColor="#FFF9445A"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

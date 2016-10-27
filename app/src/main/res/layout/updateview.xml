@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@color/transparent" >
+
+    <com.sundyn.bluesky.view.RoundProgressBarWidthNumber
+        android:id="@+id/id_circlepro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:progress="0"
+        android:visibility="visible"
+        yjl:progress_text_color="@color/blue_datacenter"
+        yjl:progress_unreached_color="@color/white" />
+
+</RelativeLayout>

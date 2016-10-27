@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="70dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_taskName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:text="WE一期项目施工工地扬尘太多..."
+            android:textColor="@color/font_color_all"
+            android:textSize="@dimen/font_title"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_taskStaus"
+            android:layout_width="40dp"
+            android:layout_height="15dp"
+            android:layout_alignBaseline="@id/tv_taskName"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16.5dp"
+            android:background="@drawable/shape_circlerect_red"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/tv_taskTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未回复"
+            android:textColor="@color/font_color_all_sub"
+            android:textSize="@dimen/font_title_sub"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_taskTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.5dp"
+            android:layout_toRightOf="@id/tv_taskTopic"
+            android:text=""
+            android:textColor="@color/font_color_all_sub"
+            android:textSize="@dimen/font_title_sub"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+</LinearLayout>

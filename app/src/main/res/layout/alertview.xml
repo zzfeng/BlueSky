@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/notice_changed"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="整改通知书"
+        android:textColor="@color/font_color_foucus"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/bg_all_style" />
+
+    <TextView
+        android:id="@+id/notice_handle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="督办催办通知书"
+        android:textColor="@color/font_color_foucus"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/bg_all_style" />
+
+    <TextView
+        android:id="@+id/id_tv_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#FFF9445A"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

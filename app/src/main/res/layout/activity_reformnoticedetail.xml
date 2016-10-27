@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <com.sundyn.bluesky.view.floatingactionmenu.ObservableScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_top_bar"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_all_style"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical" >
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_approveStatus"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="发布格式" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_noticeNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="编号" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_governmentname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="区(管)委会" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_publishdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="检查日期" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_checkteam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="检查组" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_prjname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="项目名称" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_rectificationdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:tv_name="截止日期" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="存在的问题"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <com.sundyn.bluesky.view.LinearListView
+                    android:id="@+id/problemView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:divider="@color/bg_all_style"
+                    android:dividerPadding="0.5dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    app:dividerThickness="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="违规图片"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <com.sundyn.bluesky.view.ImageGridView
+                    android:id="@+id/imageGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipChildren="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="7dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="5"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="整改回复"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <WebView
+                    android:id="@+id/id_wv_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_returnresult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="退回原因"
+                    android:textColor="@color/font_color_all_sub"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <WebView
+                    android:id="@+id/id_wv_returnresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35.5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="35.5dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/id_button_no1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bt_exit_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_login_selector"
+                    android:text="指派办事处"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/id_button_no2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/bt_exit_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_login_selector"
+                    android:text="回复"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.sundyn.bluesky.view.floatingactionmenu.ObservableScrollView>
+
+    <com.sundyn.bluesky.view.floatingactionmenu.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/white_pressed"
+        app:fab_addButtonPlusIconColor="@color/half_black"
+        app:fab_animationScroll="fade"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_menuIcon="@mipmap/sort" >
+
+        <com.sundyn.bluesky.view.floatingactionmenu.FloatingActionButton
+            android:id="@+id/action_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@mipmap/workbench_checkcount"
+            app:fab_title="指派办事处" />
+
+        <com.sundyn.bluesky.view.floatingactionmenu.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white_pressed"
+            app:fab_icon="@mipmap/workbench_countcheck"
+            app:fab_title="回复" />
+    </com.sundyn.bluesky.view.floatingactionmenu.FloatingActionsMenu>
+
+    <TextView
+        android:id="@+id/id_tv_back"
+        android:layout_width="@dimen/bt_exit_width"
+        android:layout_height="@dimen/bt_exit_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/transhalf"
+        android:gravity="center"
+        android:text="市/区政府还未回复"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

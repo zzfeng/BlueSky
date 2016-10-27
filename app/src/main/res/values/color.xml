@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bg_all_style">#F0F0F0</color>
+    <color name="bg_gray">#FFEAEEF2</color>
+    <color name="caribbean_green">#17D7B1</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="text_dark">#FF333333</color>
+    <color name="text_light">#FFACACAC</color>
+    <color name="item_focus">#44ABABAB</color>
+    <color name="list_deliver">#FFDDDDDD</color>
+    <color name="bg_tr_dark">#22000000</color>
+    <color name="bg_black">#000000 </color>
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="menu_item_text_color">#E60200</color> <!-- 滑动的字体 -->
+
+    <color name="problem_background">#FFE5E5E5</color>
+    <color name="problem_background_select">#9A9A9A</color>
+
+    <!-- login -->
+    <color name="bg_login">#FF273241</color>
+    <color name="textcolor_login">#FFE5E5E5</color>
+    <color name="bt_bg_login">#FF7ED321</color>
+    <color name="bt_bg_login_press">#417505</color>
+    <color name="bt_text_login">#FF7ED321</color>
+    <!-- tabindicator -->
+    <color name="tab_text_focus">#FF28ABEC</color>
+    <color name="tab_text_normal">#FF999999</color>
+
+    <!-- my -->
+    <color name="bg_bt_exit">#FFF9445A</color>
+
+    <!-- workbench -->
+    <color name="font_color_foucus">#FF666666</color>
+    <color name="font_color_normal">#FF999999</color>
+
+    <!-- 摄像头列表背景颜色 -->
+    <color name="bg_camearlist_1">#A1C1E6</color>
+    <color name="bg_camearlist_2">#B8E986</color>
+    <color name="bg_camearlist_3">#AEA1E6</color>
+    <color name="bg_camearlist_4">#50D6E3</color>
+    <color name="bg_camearlist_5">#28ABEC</color>
+    <color name="bg_camearlist_6">#2695C4</color>
+
+    <!-- 投诉汇总 -->
+    <color name="bg_area_1">#F26627</color>
+    <color name="bg_area_2">#3B55D9</color>
+    <color name="bg_area_3">#2889FC</color>
+    <color name="bg_area_4">#73A5E5</color>
+    <color name="bg_area_5">#D0B516</color>
+    <color name="bg_area_6">#D22489</color>
+    <color name="bg_area_7">#17B115</color>
+    <color name="bg_area_8">#BA906F</color>
+    <color name="bg_area_9">#B18518</color>
+    <color name="bg_area_10">#F9CC12</color>
+    <color name="bg_area_11">#D034E8</color>
+    <color name="tag_select">#FFF5A623</color>
+    <color name="tag_font_unselect">#FF666666</color>
+    <color name="bg_yellow">#FFF57823</color>
+
+    <!-- 时间选择器 -->
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#FF333333</color>
+    <color name="pickerview_wheelview_textcolor_center">#FF333333</color>
+    <color name="pickerview_wheelview_textcolor_divider">#FFE5E5E5</color>
+    <!-- 覆盖颜色 -->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="transhalf">#0c000000</color>
+
+    <!-- 全局字体颜色 -->
+    <color name="font_color_all">#FF333333</color>
+    <color name="font_color_all_sub">#FF999999</color>
+    <color name="blue_datacenter">#FF28ABEC</color>
+    <color name="yellow_datacenter">#FFF8E71C</color>
+    <color name="red_dark">#FFEC2874</color>
+    <color name="black_circle">#FF1A232E</color>
+    <color name="black_dark_select">#FF161E27</color>
+    <color name="black_dark">#FF202832</color>
+    <color name="dark_blue">#FF83A7D9</color>
+    <!-- floatbutton -->
+    <color name="default_normal">#ff0099cc</color> <!-- android.R.color.holo_blue_dark -->
+    <color name="default_pressed">#ff33b5e5</color> <!-- android.R.color.holo_blue_light -->
+    <color name="default_disabled">#aaa</color> <!-- android.R.color.darker_gray -->
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="half_black">#808080</color>
+    <color name="white_pressed">#f1f1f1</color>
+
+</resources>

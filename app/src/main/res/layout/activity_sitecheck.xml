@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_top_bar"
+        android:background="@color/bg_all_style" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_all_style"
+            android:orientation="vertical" >
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_prjname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="项目名称" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_prjaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="项目地址" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_area"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="所属地区" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_buildunit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="公司名称" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_people"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="负责人" />
+
+            <com.sundyn.bluesky.view.FormDetailView
+                android:id="@+id/id_tv_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                yjl:tv_name="电话" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

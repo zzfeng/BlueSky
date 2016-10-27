@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_new_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="扬尘治理是一项任重而道远的任务需要社会各方通力协作"
+            android:textColor="#FF333333"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:id="@+id/tv_partname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="建委宣传部"
+                android:textColor="#FF999999"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_publishtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/tv_partname"
+                android:text="2015-3-14"
+                android:textColor="#FF999999"
+                android:textSize="10sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1" >
+
+            <WebView
+                android:id="@+id/news_detail_wv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <include
+                android:id="@+id/loading_view"
+                layout="@layout/layout_loading" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

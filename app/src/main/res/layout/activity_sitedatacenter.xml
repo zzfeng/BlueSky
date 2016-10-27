@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yjl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <com.sundyn.bluesky.view.VerticalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_all_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="19dp"
+                android:weightSum="3" >
+
+                <com.sundyn.bluesky.view.VerticalText
+                    android:id="@+id/vt_pm10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    yjl:font_up_color="@color/blue_datacenter"
+                    yjl:text_down="PM10"
+                    yjl:text_up="..." />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="27.5dp"
+                    android:background="#FFE5E5E5" />
+
+                <com.sundyn.bluesky.view.VerticalText
+                    android:id="@+id/vt_humidity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    yjl:font_up_color="@color/blue_datacenter"
+                    yjl:text_down="相对湿度"
+                    yjl:text_up="..." />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="27.5dp"
+                    android:background="#FFE5E5E5" />
+
+                <com.sundyn.bluesky.view.VerticalText
+                    android:id="@+id/vt_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    yjl:font_up_color="@color/blue_datacenter"
+                    yjl:text_down="气温"
+                    yjl:text_up="..." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="28dp" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_windirect" />
+
+                    <TextView
+                        android:id="@+id/tv_windDic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:singleLine="true"
+                        android:text="..."
+                        android:textColor="@color/bg_login"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_windpower" />
+
+                    <TextView
+                        android:id="@+id/tv_windPowerAvg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:singleLine="true"
+                        android:text="..."
+                        android:textColor="@color/bg_login"
+                        android:textSize="10sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/id_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="30.5dp"
+                android:paddingRight="34dp"
+                android:paddingTop="2dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_pmChart"
+                    style="@style/datacenter_tab"
+                    android:text="PM10" />
+
+                <RadioButton
+                    android:id="@+id/rb_temChart"
+                    style="@style/datacenter_tab"
+                    android:text="温度" />
+
+                <RadioButton
+                    android:id="@+id/rb_humidtyChart"
+                    style="@style/datacenter_tab"
+                    android:text="湿度" />
+
+                <RadioButton
+                    android:id="@+id/rb_windChart"
+                    style="@style/datacenter_tab"
+                    android:text="风力" />
+
+                <RadioButton
+                    android:id="@+id/rb_reportChart"
+                    style="@style/datacenter_tab"
+                    android:text="举报数" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="14.5dp" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FF28ABEC" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" >
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <TextView
+                        android:id="@+id/id_tv_data_write"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="数据加载中..."
+                        android:textColor="#FF28ABEC"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <FrameLayout
+                    android:layout_width="145.5dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal" >
+
+                    <com.sundyn.bluesky.view.ColorfulRingProgressView
+                        android:id="@+id/crpv"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        yjl:bgColor="#FF273241"
+                        yjl:fgColorEnd="#FFF9445A"
+                        yjl:fgColorStart="#FFFD7A94"
+                        yjl:percent="0"
+                        yjl:startAngle="0"
+                        yjl:strokeWid="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="%"
+                        android:textColor="@color/blue_datacenter"
+                        android:textSize="24sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="64dp"
+                    android:background="#FFE5E5E5" />
+
+                <LinearLayout
+                    android:id="@+id/ll_report"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <com.sundyn.bluesky.view.VerticalText
+                        android:id="@+id/reproView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        yjl:font_up_color="#FF273241"
+                        yjl:text_bold="invisible"
+                        yjl:text_down="举报总数"
+                        yjl:text_up="0" />
+
+                    <com.sundyn.bluesky.view.VerticalText
+                        android:id="@+id/reproView_userfull"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        yjl:font_up_color="#FFF9445A"
+                        yjl:text_bold="invisible"
+                        yjl:text_down="有效举报"
+                        yjl:text_up="0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.sundyn.bluesky.view.VerticalScrollView>
+
+</LinearLayout>

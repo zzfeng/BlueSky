@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <RadioGroup
+        android:id="@+id/main_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_countCheck"
+            style="@style/datacenter_tab"
+            android:text="投诉汇总" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16.5dp"
+            android:background="@color/bg_all_style" />
+
+        <RadioButton
+            android:id="@+id/rb_supervisehandle"
+            style="@style/datacenter_tab"
+            android:text="督办催办" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16.5dp"
+            android:background="@color/bg_all_style" />
+
+        <RadioButton
+            android:id="@+id/rb_reformnotice"
+            style="@style/datacenter_tab"
+            android:text="整改通知" />
+    </RadioGroup>
+
+    <com.sundyn.bluesky.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+    </com.sundyn.bluesky.view.CustomViewPager>
+
+</LinearLayout>

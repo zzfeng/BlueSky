@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rt_cameralist"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/bg_camearlist_1"
+    android:minHeight="80dp" >
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="18dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/camera" />
+
+    <com.sundyn.bluesky.view.FocusedTextView
+        android:id="@+id/item_name"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="60dp"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical|right"
+        android:singleLine="true"
+        android:text="大门"
+        android:textColor="@color/white"
+        android:textSize="32sp" />
+
+</RelativeLayout>

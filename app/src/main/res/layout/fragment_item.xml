@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style" >
+
+    <ListView
+        android:id="@+id/lv_item_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/white"
+        android:divider="#FFE5E5E5"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/transparent"
+        android:scrollbars="none" />
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/layout_loading"
+        android:visibility="visible" />
+
+</FrameLayout>

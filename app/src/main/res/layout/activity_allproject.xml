@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_all_style"
+    android:orientation="vertical" >
+
+    <com.sundyn.bluesky.view.NormalTopBar
+        android:id="@+id/chat_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.sundyn.bluesky.view.NormalTopBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/et_user_height"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_tag"
+            android:gravity="center_vertical"
+            android:hint="请输入搜索内容"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textColor="@color/font_color_all"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/id_bt_search"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/et_user_height"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/bt_circle_selector"
+            android:text="搜索"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/id_rg_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp" >
+
+        <RadioButton
+            android:id="@+id/id_rb_priname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="工程名称"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/id_rb_constrction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="建设单位"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/id_rb_builder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="施工单位"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <view
+        android:id="@+id/chat_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        class="com.sundyn.bluesky.view.pullrefreshview.PullToRefreshListView"
+        android:cacheColorHint="@android:color/white"
+        android:divider="#FFE5E5E5"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+</LinearLayout>
